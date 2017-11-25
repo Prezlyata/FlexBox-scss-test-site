@@ -14,7 +14,26 @@ $font-stack: HelveticaNeue, sans-serif;
 $primary-color: #fcdb00;
 $bg-color: #efefef;
 $black-color: #010101;
-	
+$grey_color: #47493e;
+$lightgrey_color: #2e2e2e;
+.main_text1{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	color: $black-color;
+}
+.main_text2{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: regular;
+	color: $lightgrey_color;
+}
+.main_text3{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1rem;
+	font-weight: regular;
+	color: $grey_color;
+}
 .container{
 	max-width: 930px;
 	margin: 0 auto;
@@ -29,29 +48,71 @@ $black-color: #010101;
 .nav{
 	padding: 55px 0;
 	display: flex;
+	flex-flow: wrap;
 	justify-content: space-between;
 	&_logo{
 		display: flex;
 		align-items: center;
 		&_text{
+			@extend.main_text1;
 			margin-left: 12px;
-			font-family: 'PT Sans', sans-serif;
-			font-size: 2rem;
-			font-weight: bold;
 		}
 	}
 	&_menu{
 		display: flex;
 		align-items: center;
-		flex-basis: auto;
+		flex-flow: wrap;
 		&_links{
-			font-family: 'PT Sans', sans-serif;
+			@extend.main_text1;
 			font-size: 1.5rem;
-			font-weight: bold;
-			color: $black-color;
 		}
 		a{
 			margin-left: 70px;
+		}
+	}
+}
+.baner{
+	background-color: $primary-color;
+}
+.slider{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-flow: wrap;
+	padding-bottom: 70px;
+	&_inform{
+		display: flex;
+		flex-direction: column;
+		&_text1{
+			@extend .main_text1;
+			padding-bottom: 27px;
+		}
+		&_text2{
+			@extend .main_text2;
+			padding-bottom: 27px;
+		}
+		&_text3{
+			@extend .main_text3;
+			padding-bottom: 45px;
+		}
+		img{
+			margin-right: 39px;
+		}
+	}
+}
+.content{
+	background-color: $bg-color;
+	&_about{
+		display: flex;
+		flex-direction: column;
+		padding: 117px 0 88px;
+		align-items: center;
+		text-align: center;
+		&_title{
+			@extend .main_text1;
+		}
+		&_text{
+			@extend .main_text2;
 		}
 	}
 }
