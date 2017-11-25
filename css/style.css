@@ -1,9 +1,62 @@
-* {
+body {
   padding: 0;
   border: 0;
-  padding: 0;
+  margin: 0;
 }
 
-* ul {
+body ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+#body {
+  font: HelveticaNeue, sans-serif;
+  background-color: #efefef;
+}
+
+.header {
+  background-color: #fcdb00;
+}
+
+.nav {
+  padding: 55px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo_text {
+  margin-left: 12px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+}
+
+.nav_menu_links {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #010101;
+}
+
+.nav_menu a {
+  margin-left: 70px;
 }
