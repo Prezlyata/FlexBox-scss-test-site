@@ -115,4 +115,33 @@ $lightgrey_color: #2e2e2e;
 			@extend .main_text2;
 		}
 	}
+	&_cube{
+		display: flex;
+		flex-direction: row;
+		flex-flow: wrap;
+		justify-content: space-between;
+		&_cube1{
+			display: flex;
+			flex-direction: row;
+			padding-top: 80px;
+			&_png{
+				display: flex;
+				flex-direction: column;
+			}
+			&_text{
+				display: flex;
+				flex-direction: column;
+				padding-left: 29px;
+				text-align: left;
+				&_text1{
+					@extend .main_text2;
+					color: $black-color;
+				}
+				&_text2{
+					@extend .main_text3;
+					padding-top: 15px;
+				}
+			}
+		}
+	}
 }
