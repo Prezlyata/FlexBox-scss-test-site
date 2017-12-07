@@ -15,6 +15,7 @@ $primary-color: #fcdb00;
 $bg-color: #efefef;
 $black-color: #010101;
 $grey_color: #47493e;
+$grey_color1: #898989;
 $lightgrey_color: #2e2e2e;
 .main_text1{
 	font-family: 'PT Sans', sans-serif;
@@ -37,6 +38,7 @@ $lightgrey_color: #2e2e2e;
 .container{
 	max-width: 930px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 #body {
 	font: $font-stack;
@@ -44,6 +46,10 @@ $lightgrey_color: #2e2e2e;
 }
 .header{
 	background-color: $primary-color;
+//	overflow: hidden;
+//	position: fixed; 
+//	top: 0; 
+//	width: 100%; 
 }
 .nav{
 	padding: 55px 0;
@@ -63,7 +69,7 @@ $lightgrey_color: #2e2e2e;
 		align-items: center;
 		flex-flow: wrap;
 		&_links{
-			@extend.main_text1;
+			@extend .main_text1;
 			font-size: 1.5rem;
 		}
 		a{
@@ -120,6 +126,7 @@ $lightgrey_color: #2e2e2e;
 		flex-direction: row;
 		flex-flow: wrap;
 		justify-content: space-between;
+		padding-bottom: 165px;
 		&_cube1{
 			display: flex;
 			flex-direction: row;
@@ -141,6 +148,34 @@ $lightgrey_color: #2e2e2e;
 					@extend .main_text3;
 					padding-top: 15px;
 				}
+			}
+		}
+	}
+}
+.footer{
+	background-color: $black-color;
+	text-align: center;
+	&_text1{
+		@extend .main_text1;
+		color: $primary-color;
+		padding-top: 90px;
+	}
+	&_text2{
+		@extend .main_text2;
+		color: $grey_color1;
+		padding-top: 24px;
+	}
+	&_send{
+		padding-top: 45px;
+		&_field{
+			input{
+				display: block;
+				font-size: 14px;
+				width:580px;
+				margin: 10px auto;
+				padding: 15px 8px 15px 20px;
+				border-radius: 5px;
+				border: 1px solid $bg-color;
 			}
 		}
 	}
